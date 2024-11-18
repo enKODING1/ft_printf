@@ -6,7 +6,7 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:34:48 by skang             #+#    #+#             */
-/*   Updated: 2024/11/18 20:53:39 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/18 20:54:08 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int valid_specifier(char specifier)
 
 int  specifier_dispatcher(char specifier)
 {
-         
+               
 }
 
 int ft_printf(const char *format, ...)
