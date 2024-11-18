@@ -1,16 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 13:03:10 by skang             #+#    #+#             */
-/*   Updated: 2024/11/16 16:34:18 by skang            ###   ########.fr       */
+/*   Created: 2024/11/16 16:29:38 by skang             #+#    #+#             */
+/*   Updated: 2024/11/18 14:39:11 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
-{
-	return (c >= 0 && c <= 127);
-}
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+
+#include <stdarg.h>
+#include <stdio.h>
+
+int ft_printf(const char *format, ...);
+
+#endif
