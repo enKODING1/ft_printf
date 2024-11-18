@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_str.c                                          :+:      :+:    :+:   */
+/*   get_x.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 23:08:09 by skang             #+#    #+#             */
-/*   Updated: 2024/11/18 23:48:45 by skang            ###   ########.fr       */
+/*   Created: 2024/11/18 23:43:18 by skang             #+#    #+#             */
+/*   Updated: 2024/11/18 23:48:29 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/libft.h"
 #include "include/ft_printf.h"
 
-static char    * get_str(va_list arg_ptr)
+static int    get_x(va_list arg_ptr)
 {
-    return va_arg(arg_ptr, char *);
+    return va_arg(arg_ptr, int);
 }
 
-int print_str(va_list arg_ptr)
+int print_x(va_list arg_ptr, char x_type)
 {
-    ft_putstr_fd(get_str(arg_ptr), 1);
+    if (x_type == 'x')
+        ft_putnbr_base(get_x(arg_ptr), "0123456789abcdef");
+    if (x_type == 'X')
+        ft_putnbr_base(get_x(arg_ptr), "0123456789ABCDEF");
     return 1;
 }

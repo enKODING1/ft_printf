@@ -6,14 +6,14 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 22:38:28 by skang             #+#    #+#             */
-/*   Updated: 2024/11/18 22:54:31 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/18 23:48:34 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/libft.h"
 #include "include/ft_printf.h"
 
-int get_int(va_list arg_ptr)
+static int get_int(va_list arg_ptr)
 {
     return va_arg(arg_ptr, int);
 }
