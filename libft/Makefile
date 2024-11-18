@@ -25,7 +25,7 @@ $(NAME_BONUS): $(BONUS_OBJECTS)
 	ar rc $(NAME) $^
 	cp $(NAME) $(NAME_BONUS)
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@ -I../include/
 
 clean:
 	rm -f $(OBJECTS) $(BONUS_OBJECTS)

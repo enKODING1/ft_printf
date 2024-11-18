@@ -6,15 +6,15 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:34:48 by skang             #+#    #+#             */
-/*   Updated: 2024/11/18 20:54:08 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/18 23:07:56 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
-#include "ft_printf.h"
+#include "include/libft.h"
+#include "include/ft_printf.h"
 
 
-int valid_specifier(char specifier)
+static int valid_specifier(char specifier)
 {
    char valid_specifier_array[9];
    int   index;
@@ -30,9 +30,17 @@ int valid_specifier(char specifier)
    return 0;
 }
 
-int  specifier_dispatcher(char specifier)
+static int  specifier_dispatcher(char specifier, va_list arg_ptr)
 {
-               
+      if (specifier == 'c')
+         return print_char(arg_ptr);
+      if (specifier == 's')
+         return print_str(arg_ptr);
+      if (specifier == 'd')
+         return print_int(arg_ptr);
+       
+      return 0;
+
 }
 
 int ft_printf(const char *format, ...)
@@ -46,13 +54,13 @@ int ft_printf(const char *format, ...)
    {
       if (format[index] == '%' && valid_specifier(format[index + 1]))
       {
-
+         specifier_dispatcher(format[index+1], arg_ptr);
          index += 2;
-         
          continue;
       }
       ft_putchar_fd(format[index], 1);
       index++;
    }
+   va_end(arg_ptr);
    return 0;
 }

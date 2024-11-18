@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   get_int.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 14:15:38 by skang             #+#    #+#             */
-/*   Updated: 2024/11/18 23:12:29 by skang            ###   ########.fr       */
+/*   Created: 2024/11/18 22:38:28 by skang             #+#    #+#             */
+/*   Updated: 2024/11/18 22:54:31 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/libft.h"
 #include "include/ft_printf.h"
 
-int main(void)
+int get_int(va_list arg_ptr)
 {
-    ft_printf("hello %s %d\n", "hllo", 34);
-    return 0;
+    return va_arg(arg_ptr, int);
+}
+
+int print_int(va_list arg_ptr)
+{
+    ft_putnbr_fd(get_int(arg_ptr), 1);
+    return 1;
 }

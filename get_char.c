@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   get_char.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 14:15:38 by skang             #+#    #+#             */
-/*   Updated: 2024/11/18 23:12:29 by skang            ###   ########.fr       */
+/*   Created: 2024/11/18 23:01:53 by skang             #+#    #+#             */
+/*   Updated: 2024/11/18 23:06:43 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/libft.h"
 #include "include/ft_printf.h"
 
-int main(void)
+char    get_char(va_list arg_ptr)
 {
-    ft_printf("hello %s %d\n", "hllo", 34);
-    return 0;
+    return (char)va_arg(arg_ptr, int);
+}
+
+int print_char(va_list arg_ptr)
+{
+    ft_putchar_fd(get_char(arg_ptr), 1);
+    return 1;
 }

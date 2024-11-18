@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   get_str.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/16 16:29:38 by skang             #+#    #+#             */
-/*   Updated: 2024/11/18 14:39:11 by skang            ###   ########.fr       */
+/*   Created: 2024/11/18 23:08:09 by skang             #+#    #+#             */
+/*   Updated: 2024/11/18 23:09:59 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "include/libft.h"
+#include "include/ft_printf.h"
 
-#include <stdarg.h>
-#include <stdio.h>
+char    * get_str(va_list arg_ptr)
+{
+    return va_arg(arg_ptr, char *);
+}
 
-int ft_printf(const char *format, ...);
-
-#endif
+int print_str(va_list arg_ptr)
+{
+    ft_putstr_fd(get_str(arg_ptr), 1);
+    return 1;
+}
