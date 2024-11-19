@@ -6,7 +6,7 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:34:48 by skang             #+#    #+#             */
-/*   Updated: 2024/11/18 23:51:10 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/19 13:33:30 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,22 @@ static int  specifier_dispatcher(char specifier, va_list arg_ptr)
          return print_char(arg_ptr);
       if (specifier == 's')
          return print_str(arg_ptr);
+      if (specifier == 'p')
+         return print_addr(arg_ptr);
       if (specifier == 'd')
          return print_int(arg_ptr);
       if (specifier == 'i')
          return print_i(arg_ptr);
+      if (specifier == 'u')
+         return print_u(arg_ptr);
       if (specifier == 'x')
          return print_x(arg_ptr, 'x');
       if (specifier == 'X')
          return print_x(arg_ptr, 'X');
-       
+      if (specifier == '%')
+         ft_putchar_fd('%', 1);
+      
       return 0;
-
 }
 
 int ft_printf(const char *format, ...)

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_addr_base.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 23:22:43 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 13:15:09 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/19 13:14:53 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ static int	is_valid(char *str)
 	return (1);
 }
 
-static void	ft_recursion(long n, char *base, int len)
+static void	ft_recursion(uintptr_t n, char *base, int len)
 {
-	long	mod;
+	uintptr_t	mod;
 
 	mod = n % len;
 	if (n >= len)
@@ -65,10 +65,10 @@ static void	ft_recursion(long n, char *base, int len)
 	write(1, &base[mod], 1);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+void	ft_putnbr_addr_base(uintptr_t nbr, char *base)
 {
 	int		len;
-	long	num;
+	uintptr_t	num;
 
 	len = str_len(base);
 	if (!is_valid(base))

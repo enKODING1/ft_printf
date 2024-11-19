@@ -6,7 +6,7 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 23:34:45 by skang             #+#    #+#             */
-/*   Updated: 2024/11/18 23:42:36 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/19 12:58:49 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,14 @@ int	main(void)
 	printf("d test\n");
 	printf("original: [%d]\n", 424242);
 	ft_printf("made    : [%d]\n", 424242);
+	printf("original: [%d]\n", 0xA32);
+	ft_printf("made    : [%d]\n", 0xA32);
 	printf("===============\n");	
-	printf("i test\n");
+	printf("i test case 2\n");
 	printf("original: [%i]\n", 424242);
 	ft_printf("made    : [%i]\n", 424242);
+	printf("original: [%i]\n", 0xA1);
+	ft_printf("made	   : [%i]\n", 0xA1);
 	printf("===============\n");	
 	printf("u test\n");
 	printf("original: [%u]\n", 424242);
@@ -52,7 +56,6 @@ int	main(void)
 	printf("original: [%%]\n");
 	ft_printf("made    : [%%]\n");
 	printf("===============\n");	
-
 
 
 return (0);
