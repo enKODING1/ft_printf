@@ -6,7 +6,7 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:34:48 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 14:59:24 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/19 17:27:07 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static int	specifier_dispatcher(char specifier, va_list arg_ptr)
 	if (specifier == 'X')
 		return (print_x(arg_ptr, 'X'));
 	if (specifier == '%')
-		ft_putchar_fd('%', 1);
+		return (print_percent());
 	return (0);
 }
 
@@ -57,21 +57,24 @@ int	ft_printf(const char *format, ...)
 	va_list	arg_ptr;
 	int		index;
 	int		format_len;
+	int		str_count;
 
 	va_start(arg_ptr, format);
 	index = 0;
 	format_len = (int)ft_strlen(format);
+	str_count = 0;
 	while (format[index] != '\0' || index < format_len)
 	{
 		if (format[index] == '%' && valid_specifier(format[index + 1]))
 		{
-			specifier_dispatcher(format[index + 1], arg_ptr);
+			str_count += specifier_dispatcher(format[index + 1], arg_ptr);
 			index += 2;
 			continue ;
 		}
 		ft_putchar_fd(format[index], 1);
 		index++;
+		str_count++;
 	}
 	va_end(arg_ptr);
-	return (0);
+	return (str_count);
 }

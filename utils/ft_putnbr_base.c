@@ -6,7 +6,7 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 23:22:43 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 13:38:11 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/19 17:27:37 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,34 +51,37 @@ static int	is_valid(char *str)
 	return (1);
 }
 
-static void	ft_recursion(long n, char *base, int len)
+static void	ft_recursion(long n, char *base, int len, int *count)
 {
 	long	mod;
 
+	*count = *count + 1;
 	mod = n % len;
 	if (n >= len)
 	{
-		ft_recursion(n / len, base, len);
+		ft_recursion(n / len, base, len, count);
 		write(1, &base[mod], 1);
 		return ;
 	}
 	write(1, &base[mod], 1);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+int	ft_putnbr_base(int nbr, char *base)
 {
 	int		len;
+	int		count;
 	long	num;
 
+	count = 0;
 	len = str_len(base);
 	if (!is_valid(base))
-		return ;
+		return (0);
 	num = nbr;
 	if (num < 0)
 	{
 		write(1, "-", 1);
 		num *= -1;
 	}
-	ft_recursion(num, base, len);
-	return ;
+	ft_recursion(num, base, len, &count);
+	return (count);
 }
