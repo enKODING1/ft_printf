@@ -1,24 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_i.c                                            :+:      :+:    :+:   */
+/*   get_int.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 23:49:38 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 17:30:42 by skang            ###   ########.fr       */
+/*   Created: 2024/11/18 22:38:28 by skang             #+#    #+#             */
+/*   Updated: 2024/11/19 18:18:45 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ft_printf.h"
-#include "include/libft.h"
+#include "../include/ft_printf.h"
+#include "../include/libft.h"
 
-static int	get_i(va_list arg_ptr)
+static int	get_int_length(long n)
+{
+	int	count;
+
+	count = 1;
+	if (n < 0)
+	{
+		n *= -1;
+		count++;
+	}
+	while (n >= 10)
+	{
+		n /= 10;
+		count++;
+	}
+	return (count);
+}
+
+static int	get_int(va_list arg_ptr)
 {
 	return (va_arg(arg_ptr, int));
 }
 
-int	print_i(va_list arg_ptr)
+int	print_int(va_list arg_ptr)
 {
-	return (ft_putnbr_base(get_i(arg_ptr), "0123456789"));
+	int	num;
+
+	num = get_int(arg_ptr);
+	ft_putnbr_fd(num, 1);
+	return (get_int_length(num));
 }

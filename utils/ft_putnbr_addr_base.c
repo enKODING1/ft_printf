@@ -6,13 +6,12 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 23:22:43 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 17:27:28 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/19 18:13:09 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 #include "../include/libft.h"
-#include <unistd.h>
 
 static int	is_valid(char *str)
 {

@@ -1,7 +1,7 @@
 CC = gcc 
 CFLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a
-SOURCES = ft_printf.c get_char.c get_str.c get_addr.c get_int.c get_u.c get_x.c get_i.c get_percent.c\
+SOURCES = ft_printf.c utils/get_char.c utils/get_str.c utils/get_addr.c utils/get_int.c utils/get_u.c utils/get_x.c utils/get_i.c utils/get_percent.c\
 	utils/ft_putnbr_base.c utils/ft_putnbr_addr_base.c utils/ft_putnbr_unsigned_base.c
 OBJECTS = $(SOURCES:.c=.o)
 

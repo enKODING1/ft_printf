@@ -6,7 +6,7 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 16:29:38 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 17:59:41 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/19 18:16:43 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 int	ft_printf(const char *format, ...);
 int	ft_putnbr_base(int nbr, char *base);
 int	ft_putnbr_addr_base(uintptr_t nbr, char *base);
-int	ft_putnbr_unsigned_base(unsigned long nbr, char *base);
+int	ft_putnbr_unsigned_base(unsigned int nbr, char *base);
 
 int	print_int(va_list arg_ptr);
 int	print_char(va_list arg_ptr);

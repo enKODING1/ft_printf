@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_char.c                                         :+:      :+:    :+:   */
+/*   get_u.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 23:01:53 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 17:31:16 by skang            ###   ########.fr       */
+/*   Created: 2024/11/19 13:22:44 by skang             #+#    #+#             */
+/*   Updated: 2024/11/19 18:10:49 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ft_printf.h"
-#include "include/libft.h"
+#include "../include/ft_printf.h"
+#include "../include/libft.h"
 
-static char	get_char(va_list arg_ptr)
+static unsigned int	get_u(va_list arg_ptr)
 {
-	return ((char)va_arg(arg_ptr, int));
+	return (va_arg(arg_ptr, unsigned int));
 }
 
-int	print_char(va_list arg_ptr)
+int	print_u(va_list arg_ptr)
 {
-	ft_putchar_fd(get_char(arg_ptr), 1);
-	return (1);
+	return (ft_putnbr_unsigned_base(get_u(arg_ptr), "0123456789"));
 }
