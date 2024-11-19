@@ -6,7 +6,7 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 23:22:43 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 17:27:37 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/19 17:50:50 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ int	ft_putnbr_base(int nbr, char *base)
 	{
 		write(1, "-", 1);
 		num *= -1;
+		count++;
 	}
 	ft_recursion(num, base, len, &count);
 	return (count);

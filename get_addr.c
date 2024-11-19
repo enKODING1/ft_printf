@@ -6,7 +6,7 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 23:13:01 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 17:30:25 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/19 17:45:53 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,11 @@ int	print_addr(va_list arg_ptr)
 	int			addr_count;
 
 	addr = get_addr(arg_ptr);
+	if (addr == 0)
+	{
+		ft_putstr_fd("(nil)", 1);
+		return (5);
+	}
 	ft_putstr_fd("0x", 1);
 	addr_count = ft_putnbr_addr_base(addr, "0123456789abcdef");
 	return (addr_count + 2);
