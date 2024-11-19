@@ -6,12 +6,12 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 23:22:43 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 13:14:53 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/19 13:38:22 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "../include/ft_printf.h"
+#include <unistd.h>
 
 static int	str_len(char *str)
 {
@@ -67,7 +67,7 @@ static void	ft_recursion(uintptr_t n, char *base, int len)
 
 void	ft_putnbr_addr_base(uintptr_t nbr, char *base)
 {
-	int		len;
+	int			len;
 	uintptr_t	num;
 
 	len = str_len(base);

@@ -6,12 +6,12 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 23:22:43 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 13:15:09 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/19 13:38:11 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "../include/ft_printf.h"
+#include <unistd.h>
 
 static int	str_len(char *str)
 {
