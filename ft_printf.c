@@ -6,7 +6,7 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:34:48 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 13:38:52 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/19 14:59:24 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,12 @@ int	ft_printf(const char *format, ...)
 {
 	va_list	arg_ptr;
 	int		index;
+	int		format_len;
 
 	va_start(arg_ptr, format);
 	index = 0;
-	while (format[index] != '\0' || index < ft_strlen(format))
+	format_len = (int)ft_strlen(format);
+	while (format[index] != '\0' || index < format_len)
 	{
 		if (format[index] == '%' && valid_specifier(format[index + 1]))
 		{

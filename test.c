@@ -6,7 +6,7 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 23:34:45 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 13:40:34 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/19 14:52:25 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ int	main(void)
 	printf("===============\n");
 	printf("i test case 2\n");
 	printf("original: [%i]\n", 424242);
-	ft_printf("made    : [%i]\n", 424242);
+	ft_printf("made   : [%i]\n", 424242);
 	printf("original: [%i]\n", 0xA1);
-	ft_printf("made		: [%i]\n", 0xA1);
+	ft_printf("made	   : [%i]\n", 0xA1);
 	printf("===============\n");
 	printf("u test\n");
 	printf("original: [%u]\n", 424242);
