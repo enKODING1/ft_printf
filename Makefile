@@ -14,7 +14,7 @@ $(NAME): $(OBJECTS)
 	ar rcs $@ $(OBJECTS)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ -I./include/
+	$(CC) $(CFLAGS) -c $< -o $@ -I ./libft -I ./
 
 clean:
 	make fclean -C ./libft

@@ -6,12 +6,12 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 23:08:09 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 18:10:47 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/22 09:41:40 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
-#include "../include/libft.h"
+#include "ft_printf.h"
+#include "libft.h"
 
 static char	*get_str(va_list arg_ptr)
 {

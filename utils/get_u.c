@@ -6,12 +6,12 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 13:22:44 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 18:10:49 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/22 09:41:42 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
-#include "../include/libft.h"
+#include "ft_printf.h"
+#include "libft.h"
 
 static unsigned int	get_u(va_list arg_ptr)
 {

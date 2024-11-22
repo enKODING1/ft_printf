@@ -6,12 +6,12 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 22:38:28 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 18:18:45 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/22 09:41:37 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
-#include "../include/libft.h"
+#include "ft_printf.h"
+#include "libft.h"
 
 static int	get_int_length(long n)
 {

@@ -6,12 +6,12 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:34:48 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 17:27:07 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/22 09:40:15 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ft_printf.h"
-#include "include/libft.h"
+#include "ft_printf.h"
+#include "libft.h"
 
 static int	valid_specifier(char specifier)
 {

@@ -6,12 +6,12 @@
 /*   By: skang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 23:13:01 by skang             #+#    #+#             */
-/*   Updated: 2024/11/19 18:10:38 by skang            ###   ########.fr       */
+/*   Updated: 2024/11/22 09:41:30 by skang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
-#include "../include/libft.h"
+#include "ft_printf.h"
+#include "libft.h"
 
 static uintptr_t	get_addr(va_list arg_ptr)
 {
